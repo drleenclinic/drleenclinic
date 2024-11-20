@@ -135,12 +135,22 @@ main {
   padding: 2rem 1rem; /* Add padding for spacing */
 }
 
-
 /* Ensure Images and Content Adjust Well */
 .main1 img {
   max-width: 100%;
   height: auto;
   border-radius: 10px;
+}
+
+.main2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.main2b img {
+  width: 90%;
 }
 
 button {
@@ -167,11 +177,7 @@ button:active {
   transform: scale(0.95); /* Slight press effect */
 }
 
-.main2 {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+
 
 .references a {
   font-size: xx-small;
@@ -190,8 +196,8 @@ button:active {
   background-color: black; /* Footer background color */
   color: palegoldenrod; /* Footer text color */
   text-align: center;
-  padding: 2rem 1rem; /* Space around footer content */
-  margin-top: 2rem; /* Add space between the footer and content above */
+  padding: 1rem 0.5rem; /* Space around footer content */
+  margin-top: 0.5rem; /* Add space between the footer and content above */
   width: 100%; /* Full width */
   box-sizing: border-box; /* Include padding and border in width calculation */
   position: relative; /* Ensure it stays in the normal document flow */
@@ -208,13 +214,13 @@ button:active {
   display: flex;
   flex-direction: column; /* Stack links vertically */
   gap: 0.5rem; /* Add space between links */
-  margin: 1rem 0;
+  margin: 0.5rem 0;
 }
 
 .footer-contact a {
   color: palegoldenrod;
   text-decoration: none;
-  font-size: 1rem;
+  font-size:small;
   transition: color 0.3s ease;
 }
 
@@ -352,12 +358,21 @@ border-style: ridge;
   .main2 {
     flex-direction: column;
     align-items: center;
+    width: 90%;
+  }
+
+  .main2 img {
+   margin-right: 5%;
   }
 
   .footer-contact {
     flex-direction: row; /* Arrange links horizontally on larger screens */
     justify-content: center; /* Center links horizontally */
-    gap: 2rem; /* Add more space between links */
+    gap: 0.5rem; /* Add more space between links */
+  }
+
+  .footer-content {
+    width: 80%;
   }
 }
 
