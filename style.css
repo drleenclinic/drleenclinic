@@ -109,6 +109,8 @@ h1::selection, h2::selection, h3::selection, h4::selection, p::selection, a::sel
 
 main {
   flex: 1; /* Allow the main content to expand and push the footer to the bottom */
+  margin: 3%;
+  padding: 2%;
 }
 
 .hero {
@@ -148,6 +150,16 @@ main {
   align-items: center;
 }
 
+.main2a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main2a h3{
+text-align: center;
+}
+
 
 .main2b img {
   width: 90%;
@@ -159,13 +171,15 @@ button {
   color: palegoldenrod;
   font-size: 1rem;
   padding: 0.75rem 1.5rem;
-  border: none;
+  margin: 1%;
+  border: palegoldenrod;
   border-radius: 5px;
+  border-style: ridge;
   cursor: pointer;
   text-align: center;
   text-decoration: none;
   transition: background-color 0.3s ease, color 0.3s ease;
-  border-style: ridge;
+
 }
 
 button:hover {
@@ -228,6 +242,12 @@ button:active {
   color: #fff; /* Change color on hover */
 }
 
+.copyright {
+  font-size: xx-small;
+}
+
+
+
 /* ِAbout Page */
 
 .drleen h2 {
@@ -268,7 +288,15 @@ border-style: ridge;
   }
   .big-map img {
     width: 95%;
+    margin-right: 3%;
   }
+
+
+ /* ِlocation Page */
+.buttons {
+  display: flex;
+  justify-content: center;
+}
 
 
 
