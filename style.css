@@ -1,0 +1,367 @@
+:root {
+  --body-bg: rgb(56, 12, 60);
+  --nav-bg: rgb(30, 0, 30);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body{ 
+  min-height: 100vh;
+  margin: 0;
+  background: var(--body-bg);
+  color: palegoldenrod;
+  display: grid;
+  grid-template-columns: 25% 1fr;
+  gap: 5%;
+}
+
+
+nav{
+  position: sticky;
+  top: 0;
+  max-height: 100svh;
+  background-color:var(--nav-bg);
+}
+
+.nav-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  display: grid;
+  gap: 5%;
+  padding-block: 25%;
+}
+
+.nav-list li {
+  padding: 7% 5%;
+  margin-inline-start: 10%;
+  border-radius: 0 100vw 100vw 0;
+}
+
+.nav-list li.active {
+  view-transition-name: activeNavTab;
+  background-color: var(--body-bg);
+  position: relative;
+}
+
+::view-transition-group(activeNavTab){
+  animation-duration: 0.5s;
+}
+
+.nav-list li.active::before, .nav-list li.active::after {
+  --border-radius: 25%;
+content: '';
+position: absolute;
+width: var(--border-radius);
+height: var(--border-radius);
+left: 0;
+background-color: var(--nav-bg);
+
+}
+
+.nav-list li.active::after {
+top: calc(var(--border-radius) * -1);
+border-radius: 0 0 0 100%;
+box-shadow: -5px 5px 0 5px var(--body-bg);
+
+}
+
+.nav-list li.active::before {
+  bottom: calc(var(--border-radius) * -1);
+  border-radius: 100% 0 0 0 ;
+  box-shadow: -5px -5px 0 5px var(--body-bg);
+  }
+
+.nav-list a {
+  color: palegoldenrod;
+  display: block;
+  text-decoration: none;
+}
+
+
+h1, h2 {
+  text-align: center;
+  padding: 1%;
+  font-size:xx-large;
+}
+
+h3, h4 {
+  text-align: center;
+  padding: 1%;
+  font-size: x-large;
+}
+
+p, a, li, ul, ol {
+  text-align: start;
+  padding: 1%;
+  font-size: x-large;
+}
+
+
+
+h1::selection, h2::selection, h3::selection, h4::selection, p::selection, a::selection, li::selection {
+  color: rgb(50, 17, 50);
+  background-color: palegoldenrod;
+}
+
+main {
+  flex: 1; /* Allow the main content to expand and push the footer to the bottom */
+}
+
+.hero {
+  padding-right:8%;
+  height: fit-content;
+}
+
+.hero h3{
+  text-align: center;
+}
+
+.hero-image {
+  width: 95%;
+  border-style:ridge;
+  border-width: 7px;
+}
+
+.main1{
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Horizontally center content */
+  text-align: center; /* Align text in the center */
+  gap: 1rem; /* Add space between elements */
+  padding: 2rem 1rem; /* Add padding for spacing */
+}
+
+
+/* Ensure Images and Content Adjust Well */
+.main1 img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+button {
+  display: inline-block;
+  background-color: var(--body-bg); /* Use your site's variable for nav background */
+  color: palegoldenrod;
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border-style: ridge;
+}
+
+button:hover {
+  background-color: palegoldenrod; /* Swap colors on hover */
+  color: var(--nav-bg);
+}
+
+button:active {
+  transform: scale(0.95); /* Slight press effect */
+}
+
+.main2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.references a {
+  font-size: xx-small;
+  color: palegoldenrod;
+}
+
+.references li {
+  font-size: xx-small;
+  margin: 0;
+  padding: 0;
+}
+
+/* Footer Styling */
+.site-footer {
+  grid-column: 1 / -1; /* Ensure the footer spans the entire width of the grid */
+  background-color: black; /* Footer background color */
+  color: palegoldenrod; /* Footer text color */
+  text-align: center;
+  padding: 2rem 1rem; /* Space around footer content */
+  margin-top: 2rem; /* Add space between the footer and content above */
+  width: 100%; /* Full width */
+  box-sizing: border-box; /* Include padding and border in width calculation */
+  position: relative; /* Ensure it stays in the normal document flow */
+}
+
+/* Footer Content Styling */
+.footer-content {
+  max-width: 800px; /* Limit width for better readability on larger screens */
+  margin: 0 auto; /* Center the footer content */
+}
+
+/* Footer Contact Links */
+.footer-contact {
+  display: flex;
+  flex-direction: column; /* Stack links vertically */
+  gap: 0.5rem; /* Add space between links */
+  margin: 1rem 0;
+}
+
+.footer-contact a {
+  color: palegoldenrod;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.footer-contact a:hover {
+  color: #fff; /* Change color on hover */
+}
+
+/* ِAbout Page */
+
+.drleen h2 {
+width: 90%;
+margin-right: 5%;
+border-style: ridge;
+}
+
+.background-image {
+  background-image: url(images/Dr.Leen.Clinic\ Original.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  min-height: 450px;
+  }
+
+  .background-image h1 {
+    color: var(--body-bg);
+  }
+
+  /* ِObGynPlog Page */
+  .ObGyn {
+    margin: 1%;
+    padding: 1%;
+    text-align: start;
+  }
+
+  .ObGyn ol, li, h3 {
+    font-size: x-large;
+    text-align: start;
+    padding: 1%;
+    margin: 1%;
+  }
+  
+  .big-map {
+    width: 95%;
+  }
+  .big-map img {
+    width: 95%;
+  }
+
+
+
+/* Dropdown Menu for Small Screens */
+@media (max-width: 768px) {
+  body {
+    display: block; /* Stack layout on small screens */
+    margin: 0;
+  }
+
+  nav {
+    width: 100%; /* Full width for toggle button */
+    max-height: none; /* Adjust height to fit content */
+  }
+
+  .nav-toggle {
+    display: block; /* Show the toggle button */
+    background-color: var(--nav-bg);
+    color: palegoldenrod;
+    padding: 1rem;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    font-size: 1.2rem;
+    width: 100%;
+  }
+
+  .nav-list {
+    display: none; /* Hide the nav list by default */
+    position: absolute;
+    top: 100%; /* Below the toggle button */
+    left: 0;
+    width: 100%; /* Full width */
+    background-color: var(--nav-bg);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    z-index: 1000;
+  }
+
+  .nav-list.show {
+    display: flex; /* Show nav as a dropdown */
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+  }
+
+  .nav-list li {
+    width: 100%; /* Full width for dropdown items */
+    text-align: center;
+    padding: 1rem;
+    border-radius: 0; /* No rounded corners */
+  }
+
+  .nav-list a {
+    color: palegoldenrod;
+    text-decoration: none;
+    width: 100%;
+    display: block;
+  }
+
+
+  .hero-image {
+    width: 100%;
+  }
+
+  h1, h2 {
+    font-size: larger;
+  }
+  
+  h3, h4 {
+    font-size: large;
+  }
+
+  p, li {
+    font-size: medium;
+  }
+
+   .main1 {
+    padding: 1rem;
+  }
+  button {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .main2 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-contact {
+    flex-direction: row; /* Arrange links horizontally on larger screens */
+    justify-content: center; /* Center links horizontally */
+    gap: 2rem; /* Add more space between links */
+  }
+}
+
+
+
+
+
