@@ -145,6 +145,8 @@ main {
 /* Ensure Images and Content Adjust Well */
 .main1 img {
   aspect-ratio: 1080 / 1350;
+  width: 1080;
+  height: 1350;
   max-width: 80%;
   height: auto;
   object-fit: contain;
@@ -160,6 +162,8 @@ main {
 
 
 .main2 img {
+  width: 559;
+  height: 487;
   aspect-ratio: 559 / 487;
   max-width: 90%;
   height: auto;
